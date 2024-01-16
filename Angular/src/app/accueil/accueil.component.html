@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-title>Salut à toi {{name}}</mat-card-title>
+  <mat-card-content>
+    <input name="name" [(ngModel)]="name">Salut à toi {{name}}
+  </mat-card-content>
+</mat-card>
+<carte [employe]="personne">
+
+</carte>
+<button mat-raised-button color="primary" (click)="random()">Random</button>
