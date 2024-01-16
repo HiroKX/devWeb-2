@@ -11,7 +11,6 @@ export class DrawerComponent {
   @ViewChild(MatDrawer) drawer!: MatDrawer;
 
   public toggleDrawer():void {
-    console.log("toggleDrawer");
     this.drawer.toggle();
   }
 }

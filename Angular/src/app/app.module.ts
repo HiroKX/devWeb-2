@@ -23,6 +23,7 @@ import { GraphComponent } from './graph/graph.component';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
+import {MatMenuModule} from "@angular/material/menu";
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
         deps: [HttpClient]
       }
     }),
+    MatMenuModule,
 
   ],
   providers: [
