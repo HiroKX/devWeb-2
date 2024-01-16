@@ -1,5 +1,5 @@
 export interface Person {
-  id?: string;
+  id: string;
   nom?: string;
   prenom?: string;
   photo?: string | ArrayBuffer | null;

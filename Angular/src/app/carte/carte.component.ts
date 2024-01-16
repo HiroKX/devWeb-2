@@ -15,7 +15,9 @@ export class CarteComponent {
   @Output('personUpdate') update$: EventEmitter<any> = new EventEmitter();
 
   constructor() {
-    this.employe = {};
+    this.employe = {
+      'id':"0",
+    };
   }
 
   delete() {

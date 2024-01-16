@@ -16,10 +16,14 @@ import { HeaderComponent } from './header/header.component';
 import { DrawerComponent } from './drawer/drawer.component';
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
-import {HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 import { ListPersonnelComponent } from './list-personnel/list-personnel.component';
 import { ContactComponent } from './contact/contact.component';
 import { GraphComponent } from './graph/graph.component';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +33,8 @@ import { GraphComponent } from './graph/graph.component';
     DrawerComponent,
     ListPersonnelComponent,
     ContactComponent,
-    GraphComponent
+    GraphComponent,
+    LangueBoutonComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +48,16 @@ import { GraphComponent } from './graph/graph.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    HttpClientModule
+    HttpClientModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+
   ],
   providers: [
     provideClientHydration()
@@ -51,3 +65,6 @@ import { GraphComponent } from './graph/graph.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
