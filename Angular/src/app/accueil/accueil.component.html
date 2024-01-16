@@ -4,7 +4,7 @@
     <input name="name" [(ngModel)]="name">Salut à toi {{name}}
   </mat-card-content>
 </mat-card>
-<carte [employe]="personne">
+<carte [employe]="personne" (personDelete)="delete(personne)">
 
 </carte>
 <button mat-raised-button color="primary" (click)="random()">Random</button>

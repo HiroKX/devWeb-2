@@ -25,4 +25,10 @@ export class AccueilComponent {
     });
   }
 
+  delete(person: Person){
+    this.httpClient.delete("http://localhost:3000/api/employe/:id".replace(':id', person.id!)).subscribe(() => {
+      this.random();
+    });
+  }
+
 }
