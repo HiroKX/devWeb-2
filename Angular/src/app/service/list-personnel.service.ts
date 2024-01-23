@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Person} from "./model/Person";
+import {Person} from "../model/Person";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -23,6 +23,7 @@ export class ListPersonnelService {
   }
 
   delete(id: string): Observable<any> {
+    console.log(id);
     return this.httpClient.delete('http://localhost:3000/api/employe/:id'.replace(':id', id));
   }
 

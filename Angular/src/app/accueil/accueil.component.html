@@ -1,10 +1,7 @@
-<mat-card>
-  <mat-card-title>Salut à toi {{name}}</mat-card-title>
-  <mat-card-content>
-    <input name="name" [(ngModel)]="name">Salut à toi {{name}}
-  </mat-card-content>
-</mat-card>
-<carte [employe]="personne" (personDelete)="delete(personne)">
+<section>
+  <carte [employe]="personne" (personDelete)="delete(personne)"></carte>
+</section>
 
-</carte>
-<button mat-raised-button color="primary" (click)="random()">Random</button>
+<button id="refresh" mat-fab color="primary" (click)="random()">
+  <mat-icon>refresh</mat-icon>
+</button>

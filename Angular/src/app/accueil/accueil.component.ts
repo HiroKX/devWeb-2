@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Person} from "../model/Person";
-import {ListPersonnelService} from "../list-personnel.service";
+import {ListPersonnelService} from "../service/list-personnel.service";
 
 @Component({
   selector: 'accueil',

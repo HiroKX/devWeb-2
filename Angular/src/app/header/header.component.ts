@@ -8,5 +8,4 @@ import {DrawerComponent} from "../drawer/drawer.component";
 })
 export class HeaderComponent {
   @Input() drawer!: DrawerComponent;
-
 }

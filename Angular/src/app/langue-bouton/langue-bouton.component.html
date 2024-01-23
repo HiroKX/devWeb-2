@@ -2,13 +2,13 @@
   <mat-icon>translate</mat-icon>
 </button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>
-    <span (click)="useLanguage('fr')">{{ 'langue.francais' | translate }}</span>
+  <button (click)="useLanguage('fr')" mat-menu-item>
+    <span>{{ 'langue.francais' | translate }}</span>
   </button>
-  <button mat-menu-item>
-    <span (click)="useLanguage('en')">{{ 'langue.anglais'  | translate }}</span>
+  <button (click)="useLanguage('en')" mat-menu-item>
+    <span>{{ 'langue.anglais'  | translate }}</span>
   </button>
-  <button mat-menu-item>
-    <span (click)="useLanguage('de')">{{ 'langue.allemand' | translate }}</span>
+  <button (click)="useLanguage('de')" mat-menu-item>
+    <span>{{ 'langue.allemand' | translate }}</span>
   </button>
 </mat-menu>
