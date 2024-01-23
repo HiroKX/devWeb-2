@@ -21,7 +21,7 @@ export class CarteComponent {
   }
 
   delete() {
-    this.delete$.emit(this.employe);
+    this.delete$.emit(this.employe.id);
   }
 
   update() {

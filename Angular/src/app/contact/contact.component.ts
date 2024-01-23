@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+  @ViewChild('nom') nom: ElementRef | undefined;
+  @ViewChild('prenom') prenom: ElementRef | undefined;
+
+  ngAfterViewInit(){
+    this.nom!.nativeElement.innerHTML = "LAGLER";
+    this.prenom!.nativeElement.innerHTML = "Robin";
+  }
 
 }

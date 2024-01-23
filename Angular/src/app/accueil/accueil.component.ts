@@ -13,17 +13,29 @@ export class AccueilComponent {
 
   personne!: Person;
 
+  empty!: boolean;
+
   constructor(public listePersonnelService: ListPersonnelService) {
     this.listePersonnelService.fetch().subscribe((data:Person[]) => {
-      this.personne = data[1];
+      if(data != null) {
+        this.empty = false;
+        this.personne = data[1];
+      }
+      else {
+        this.empty = true;
+      }
     });
   }
 
   random(){
     this.listePersonnelService.fetchRandom().subscribe(data => {
-      this.personne = <Person>(data);
+      if(data != null)
+        this.personne = <Person>(data);
+      else
+        this.empty = true;
     });
   }
+
 
   delete(person: Person){
     this.listePersonnelService.delete(person.id).subscribe(() => {

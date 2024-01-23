@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatCardModule} from "@angular/material/card";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import { CarteComponent } from './carte/carte.component';
@@ -24,6 +24,13 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from "@ngx-translate/http-loader";
 import { LangueBoutonComponent } from './langue-bouton/langue-bouton.component';
 import {MatMenuModule} from "@angular/material/menu";
+import {MatLineModule} from "@angular/material/core";
+import { BadgeChefDirective } from './badge-chef.directive';
+import { FormulaireComponent } from './formulaire/formulaire.component';
+import {MatInputModule} from "@angular/material/input";
+import { AjoutPopupComponent } from './ajout-popup/ajout-popup.component';
+import { EditionComponent } from './list-personnel/edition/edition.component';
+import {MatRadioModule} from "@angular/material/radio";
 
 @NgModule({
   declarations: [
@@ -35,7 +42,11 @@ import {MatMenuModule} from "@angular/material/menu";
     ListPersonnelComponent,
     ContactComponent,
     GraphComponent,
-    LangueBoutonComponent
+    LangueBoutonComponent,
+    BadgeChefDirective,
+    FormulaireComponent,
+    AjoutPopupComponent,
+    EditionComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +70,10 @@ import {MatMenuModule} from "@angular/material/menu";
       }
     }),
     MatMenuModule,
+    MatLineModule,
+    MatInputModule,
+    ReactiveFormsModule,
+    MatRadioModule,
 
   ],
   providers: [
