@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
-import {ListPersonnelService} from "../../service/list-personnel.service";
-import {Person} from "../../model/Person";
+import {ListPersonnelService} from "../../../service/list-personnel.service";
+import {Person} from "../../../model/Person";
 
 @Component({
   selector: 'app-edition',

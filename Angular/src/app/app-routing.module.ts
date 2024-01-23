@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AccueilComponent} from "./accueil/accueil.component";
-import {ListPersonnelComponent} from "./list-personnel/list-personnel.component";
-import {GraphComponent} from "./graph/graph.component";
-import {ContactComponent} from "./contact/contact.component";
-import {EditionComponent} from "./list-personnel/edition/edition.component";
+import {AccueilComponent} from "./component/accueil/accueil.component";
+import {ListPersonnelComponent} from "./component/list-personnel/list-personnel.component";
+import {GraphComponent} from "./component/graph/graph.component";
+import {ContactComponent} from "./component/contact/contact.component";
+import {EditionComponent} from "./component/list-personnel/edition/edition.component";
 import {EmployeDetailResolverResolver} from "./resolver/employe-detail-resolver.resolver";
 
 const routes: Routes = [

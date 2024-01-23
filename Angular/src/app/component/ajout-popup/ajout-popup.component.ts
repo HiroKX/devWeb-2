@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
-import {Person} from "../model/Person";
+import {Person} from "../../model/Person";
 
 export type PopupAction = Person & {mode: string};
 

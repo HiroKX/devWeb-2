@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Person} from "../model/Person";
-import { ListPersonnelService } from "../service/list-personnel.service";
+import {Person} from "../../model/Person";
+import { ListPersonnelService } from "../../service/list-personnel.service";
 import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 import {AjoutPopupComponent} from "../ajout-popup/ajout-popup.component";
 import {mergeMap} from "rxjs";

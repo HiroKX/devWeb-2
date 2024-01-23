@@ -1,5 +1,5 @@
 import {Directive, ElementRef, Input, Renderer2} from '@angular/core';
-import {Person} from "./model/Person";
+import {Person} from "../model/Person";
 
 @Directive({
   selector: '[badgeChef]'
